@@ -11,3 +11,12 @@ def gettestArtistInfo():
                         { "height": 64,"url": "https://i.scdn.co/image/ab67616d00004851ad40f4e70b2f2a2a6052d49d","width": 64}
                     ],
             'name': 'Salim Merchant', 'popularity':1 , 'type': 'artist', 'uri': 'spotify:artist:1TbRSunWGZ46mqnapcWxrm'}
+
+def gettestTracks():
+    return ['Isha Wala LOVE',
+            'Ainvayi Ainvayi',
+            'Aye Khuda', 
+            'Chak De INDIA',
+            'Galliyan-Dil Mein HO Tum',
+            "Kurbaan (Original Motion Picture Soundtrack)",
+            "Shukran Allah"]
