@@ -12,4 +12,61 @@
     </head>
     
    <title>Welcome to Ronny's Heat</title>
-   
+    
+    <body>
+
+        <h1>
+            <marquee><b><font size="45" | color="ffd166">
+            🎵 🎼 Ronny's Favourite Music Artists 🎹 🎶
+            </b></font></marquee>
+        </h1>
+        
+        <h2><font size="12" | color= "cdb4db">Random Artist selected from below list: </font><br>
+            <font color="red">Refresh to change artist 🔄</font>
+        </h2>   
+       
+        <h2>
+            <ul><font color="#87f2ac">
+                <li>Arijit Singh</li>
+                <li>Harshdeep Kaur</li>
+                <li>Neha Kakkar</li>
+                <li>Beyonce</li>
+                
+                </font>
+            </ul>
+        
+         </h2>
+        
+        <h1>
+            <font size="26" | color="cdb4db"> Top ten songs of <b>"{{artistName}}":</font><br>
+            <font color="red">Click on song to see lyrics 👆</font>
+            <img src={{artistImg}} width= "250" height="250" style="float:right" />
+            </b>
+             
+        </h1>
+        
+        <h2>
+            {%for i in range(0, tracksLen)%} 
+                <ul>
+                    <li>
+                        <a href={{lyrics[i]}}><font size= "12" | color="#F20056">
+                             {{tracks[i]['name']}}
+                        </a>
+                        
+                        <img src= {{tracks[i]["album"]["images"][0]["url"]}} width="100" height="100" style="float:center"  />
+                        🎧
+                        <audio 
+                                controls src={{tracks[i]['preview_url']}}
+                                <code>audio</code>element.
+                        </audio>
+                
+                    </li></font>
+                </ul>
+                
+            {%endfor%} 
+            
+        </h2>
+       
+        
+    </body>
+</html>
