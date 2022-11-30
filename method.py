@@ -33,3 +33,29 @@ def getTracks(rand_id):
         trackList.append(track)
         
     return trackList
+
+#genius api for song lyrics   
+
+def getLyrics(track, artist):
+    headers = {
+        'Authorization': 'Bearer {token}'.format(token=os.getenv('genius_token')),
+    }
+    
+    #split the track string when hit "(" and "-" and return first element
+    #Concatenation and replace white space with '%20'
+    search = (track.split("(")[0].split("-")[0] + artist).replace(" ", "%20")   
+    
+    songInfo = requests.get("http://api.genius.com/search?q=" + search, headers=headers).json()
+   
+    try: 
+        song_path = songInfo["response"]["hits"][0]["result"]["api_path"]
+        track = requests.get("http://api.genius.com" + song_path, headers=headers).json()
+        
+        path= track['response']["song"]["path"]
+        # print()
+        # print(path)
+        
+        return path
+    
+    except: 
+        return "/Lyrics%20not%20found!!!"
