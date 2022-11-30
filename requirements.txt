@@ -1,4 +1,4 @@
-python-3.6.12
+python-3.7.15
 Flask
 requests
 python-dotenv
