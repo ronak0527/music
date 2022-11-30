@@ -10,7 +10,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv()) # This is to load your API keys from .env
 
 # declaring app name
-app = Flask(__name__)
+app=Flask(__name__,template_folder='template')
  
 # defining home page   
 @app.route('/')
