@@ -32,9 +32,9 @@ def index():
     for track in tracks:
         trackList.append(track)
         
-    lyrics = []
-    for track in trackList:
-        lyrics.append("http://genius.com" + getLyrics(track["name"], artistInfo["name"]))
+    #lyrics = []
+    #for track in trackList:
+       # lyrics.append("http://genius.com" + getLyrics(track["name"], artistInfo["name"]))
     
     #returning index.html
     return render_template(
@@ -43,7 +43,7 @@ def index():
         artistName =artistInfo["name"],
         tracks=getTracks(rand_id),
         tracksLen = len(tracks),
-        lyrics=lyrics,
+       # lyrics=lyrics,
         )
 
 # running app 
