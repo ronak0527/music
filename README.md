@@ -37,3 +37,17 @@ SETTING UP PROJECT
     pip install requests
     pip install python-dotenv
     pip install random
+
+5.Running the app
+    Run command in terminal: python3 app.py
+
+6.Heruko Link
+    https://music-media-player-1.herokuapp.com/
+
+-------------------------------------------------------------------------------------------------------------------
+
+##MISSING PARTS
+
+1.I had trouble creating login page and all that so i kept it out of the project because it was holding up the rest. After submission I will keep working on how to figure it out so i can have it ready to put on my resume.
+
+2.Heruko is giving me trouble deploying the app, so I am submitting it and will keep trying to get it de[ployed and update you.
